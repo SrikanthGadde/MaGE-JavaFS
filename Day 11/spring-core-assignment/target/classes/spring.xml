@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<context:annotation-config />
+     <!-- Point bean -->
+	<bean id="point1" class="com.telstra.spring_core_assignment.models.Point">
+		<property name="x" value="1" />
+		<property name="y" value="2" />
+	</bean>
+	
+	<!-- Line bean -->
+	<bean id="line1" class="com.telstra.spring_core_assignment.models.Line">
+
+	</bean>
+	
+	<!-- p1 bean -->
+	<bean id="point2" class="com.telstra.spring_core_assignment.models.Point">
+		<property name="x" value="2" />
+		<property name="y" value="4" />
+	</bean>
+	
+	<!-- p2 bean -->
+	<bean id="point3" class="com.telstra.spring_core_assignment.models.Point">
+		<property name="x" value="4" />
+		<property name="y" value="16" />
+	</bean>
+	
+	<!-- Triangle bean -->
+	<bean id="triangle1" class="com.telstra.spring_core_assignment.models.Triangle">
+		<property name="p1">
+			<bean id="point1" class="com.telstra.spring_core_assignment.models.Point">
+				<property name="x" value="1" />
+				<property name="y" value="2" />
+			</bean>
+		</property>
+		<property name="p2">
+			<bean id="point2" class="com.telstra.spring_core_assignment.models.Point">
+				<property name="x" value="2" />
+				<property name="y" value="4" />
+			</bean>
+		</property>
+		<property name="p3">
+			<bean id="point3" class="com.telstra.spring_core_assignment.models.Point">
+				<property name="x" value="4" />
+				<property name="y" value="16" />
+			</bean>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+
+	<!-- Welcome class -->
+	<!-- 
+	<bean id="welcome1" class="com.telstra.spring_core_demo.Welcome"> 
+		<property name="message" value="Welcome to Spring" /> 
+		<constructor-arg name="" value=""></constructor-arg> 
+	</bean> 
+	<bean id="welcome1" class="com.telstra.spring_core_demo.Welcome" > 
+		<property name="message" value="Welcome to Spring"/> 
+		<constructor-arg name="" value=""></constructor-arg> 
+	</bean> -->
+
+	<aop:aspectj-autoproxy />
+
+	<bean id="welcome" class="com.telstra.spring_core_demo.Welcome">
+		<property name="message" value="Welcome" />
+	</bean>
+
+	<bean id="sample" class="com.telstra.spring_core_demo.Sample" />
+
+	<bean id="logging" class="com.telstra.aspects.Aspects" />
+	<bean id="logging1" class="com.telstra.aspects.AspectAround" />
+	<bean id="logging_return" class="com.telstra.aspects.AspectReturn" />
+	<bean id="logging_throwing" class="com.telstra.aspects.AspectThrowing" />
+
+</beans>
