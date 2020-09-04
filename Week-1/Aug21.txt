@@ -1,0 +1,229 @@
+Open Perspective -> Change to Java
+
+Windows -> Show view -> Console
+
+File -> New -> Java Project
+
+src (Right-click project)->New Class-> Package: com.telstra.pack1
+                                        Name: main
+                                        Method stubs: public static void main
+                                        
+In the Main.java file:  
+    Shift+Space is used for auto-complete
+    
+    System.out.println("Welcome")
+    
+(Assignment 1) How much memory is allocated to different data types:
+Byte
+Short
+Int
+Long
+Float
+Double
+Char
+Boolean
+
+
+Scanner class for Inputs
+
+Task 1:
+    package com.telstra.pack1;
+
+    import java.util.Scanner;
+
+    public class Main {
+
+        public static void main(String[] args) {
+            // TODO Auto-generated method stub
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter three numbers ");
+            int n1 = sc.nextInt();
+            int n2 = sc.nextInt();
+            int n3 = sc.nextInt();
+            
+            int lar1 = (n1>n2)?n1:n2;
+            int lar2 = (n3>lar1)?n3:lar1;
+            
+            System.out.println(lar2);
+        }
+
+    }
+
+Operators:
+1. Arithmetic operators: + - * / %
+2. Relational operators: > < == <= >= !=
+3. Logical operators: && || !
+
+If-else statements
+For loops
+While loops
+Do-while loops (menu based stuff)
+
+Subroutines (functions)
+
+Task 2:
+
+    package com.telstra.pack1;
+
+    import java.util.Scanner;
+
+    public class Main {
+
+        public static void main(String[] args) {
+            // TODO Auto-generated method stub		
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a number: ");
+            int n = sc.nextInt();
+        
+            int rnum = 0;
+            int r;
+            
+            while(n != 0) {
+                r = n%10;
+                n = n/10;
+                rnum = rnum*10 + r;	
+            }
+            System.out.println("The reversed number is: "+rnum);
+        }
+
+    }
+    
+(Assignment 2) For Task 2, modify to accomodate negatives and multiples of 10.
+    Eg. -1234 => -4321 (Use ternary operators)
+        100 => 1
+        2500 => 52
+        -15600 => -651
+        
+Task 3  (Assignment 3) Check if a number is armstrong number.
+
+Data conversion (Typecasting)
+    -   Integer.parseInt()
+    
+    A literal assigned to a variable is considered as a double
+    
+    Implicit casting
+    Assigning lower size data type to a higher sized data type
+    float f1 = 13.33F;
+    double d1 = f1;
+    
+    Explicit casting
+    float f2 = (float) d1;
+    int n1 = (int)d1;
+    
+Task 4 - Find factorial of a number
+
+
+Do research about the following in Java
+1. Call by value
+2. Call by reference
+
+Arrays (a collection of group of elements)- data types
+    -All elements must be of same type
+    -Access elements using index values
+    -Index starts from 0
+    -Static data structure
+    -Memory is allocated contiguously
+    
+
+    Operations supported:
+    -Insert element
+    -Delete element
+    -Update element
+    -Traverse
+    -Search
+    -Sort
+    
+Task 5 - Find min and max element in a given array (ArrayDemo project)
+
+Enhanced for-loop (ArrayDemo)
+
+Procedural Programming:
+Top-down approach
+
+Object Oriented Programming:
+Encapsulation: Private Public Protected Default
+Abstraction: 
+Polymorphism
+Inheritance
+
+******************************************************************************************************************
+Day 1 Assignment
+Assignment - 1
+A good program must be time efficient and memory efficient. Performance of a program can be improved by optimizing the code. Optimizing can be done at design level and source code level	
+
+Identify different ways to solve a problem and choose the best algorithm
+1.	 Finding a prime number 
+2.	To find whether a  number is Armstrong number  
+3.	To find  palindrome words in a given string
+4.	To remove all the duplicate  elements in an integer array
+
+Assignment – 2
+Conduct the Loop Optimisation for the following  source code  to improve the program’s performance.
+1.  calculate j*k*l*m*n outside the loop
+for (i=1; i<count; i++) { 
+	a[i] = i*j*k*l*m*n; 
+} 
+
+2.  Read the discountTbl[discount] outside the inner loop and within the outer loop
+for (discount = 0; discount < numD; discount++) 
+{ 
+ for (rate = 0; rate < numR; rate++) 
+ { 
+     rateTbl[rate] = rateTbl[rate] * discountTbl[discount]; 
+ } 
+} 
+
+3.  Calculate log(3)^2 outside the loop
+for (i=1; i<count; i++) { 
+   a[i] = Math.pow(log(i) / log(3), 2); 
+} 
+
+Assignment-3
+
+1. What is the result that will be printed out ?
+public class Test{
+public static void main(String[] args)
+{
+ float f=(1/4) *10;                 //Compilation error. Assigning double to a float. Use an explicit cast
+int i = Math.round(f);              //3
+System.out.println(i);              //3
+}}
+
+2.
+Which of the following are valid declarations?
+1. int i = 0XCAFE;                  //Invalid
+2. boolean b = 0;                   //Invalid
+3. char c = 'A';                    //Valid
+4. byte b = 128;                    //Invalid   
+5. char c = ""A"";"                 //Invalid
+
+3. 
+class Test{
+ public static void main(String [] args){
+ int x= 2;  
+ int y= 1;
+ for (int z = 0; z < 5; z++){       //GO THROUGH THE LOOP 5 TIMES
+  if (( ++x > 2 ) || (++y > 2)){    
+   x++;
+ }}
+ System.out.println(x + "" "" + y); //Compilation error -> "" + ""
+ }
+}
+What is the output of the program?
+
+IN A CONDITIONAL STATEMENT IF THER IS AN OR BETWEEN TWO OR MORE COMPARISONS, IF THE FISRT IS TRUE, THE LATER CONDITIONS DON'T GET EXCUTED
+
+                    Before      After
+First iteration:    x = 2       x = 4
+                    y = 1       y = 1
+Second iteration    x = 4       x = 6
+                    y = 1       y = 1
+Third iteration     x = 6       x = 8
+                    y = 1       y = 1
+Fourth iteration    x = 8       x = 10
+                    y = 1       y = 1
+Fifth iteration     x = 10      x = 12
+                    y = 1       y = 1
+
+
+
