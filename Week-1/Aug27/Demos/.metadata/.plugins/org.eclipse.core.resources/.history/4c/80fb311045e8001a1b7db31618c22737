@@ -1,0 +1,5 @@
+package com.telstra.database;
+
+public class Book {
+	
+}

@@ -1,0 +1,19 @@
+package model;
+
+public class Book {
+	
+	private int bId;
+	private String name;
+	private int bPrice;
+	
+	public Book(int bId, String name, int bPrice) {
+		super();
+		this.bId = bId;
+		this.name = name;
+		this.bPrice = bPrice;
+	}
+	
+	
+	
+}
+ 

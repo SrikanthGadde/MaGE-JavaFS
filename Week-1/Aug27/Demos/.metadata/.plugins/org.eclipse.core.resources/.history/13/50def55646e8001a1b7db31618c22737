@@ -1,0 +1,8 @@
+package data;
+
+import java.sql.
+
+public class DataManager {
+	public Connection con;
+	public static Connection getConnect();
+}

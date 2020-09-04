@@ -1,0 +1,14 @@
+package com.telstra.exceptions;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e = new Employee(7823, 12);
+		
+		e.applyLeave(10);
+		e.applyLeave(4);
+		
+	}
+
+}

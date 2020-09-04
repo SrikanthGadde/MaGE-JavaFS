@@ -1,0 +1,11 @@
+package cartpack;
+
+import prodpack.Product;
+
+public interface CartInterface {
+	
+	String addToCart(Product p);
+	String removeFromCart(Product p);
+	
+	
+}

@@ -1,0 +1,20 @@
+package com.telstra.concurrency;
+
+public class ThreadOperation implements Runnable {
+	private Thread t;
+	private MathOperation m;
+	
+	public AddThread(MathOperation m, String threadName)
+	{
+		
+	}
+	
+	@Override
+	public void run() {
+		m.add(10);
+		m.sub(3);
+		
+	}
+
+	
+}

@@ -1,0 +1,76 @@
+package prodaccesspack;
+
+import java.util.ArrayList;
+
+import prodpack.Product;
+
+public class ProductAccess implements ProductAccessInterface {
+  // resource is arraylist 
+	public ArrayList<Product>  alist = new ArrayList<Product>();
+		
+	@Override
+	public String addProduct(Product prod) {
+		alist.add(prod);
+		return ("Product "+prod+" added successfully");
+	}
+
+	@Override
+	public ArrayList<Product> getAllProducts() {
+		//System.out.println(alist);
+		return alist;
+	}
+
+	@Override
+	public Product getAProductbyId(int id) {
+		Product temp=null;
+		for (Product p:alist)  // enhanced for loop 
+		{
+			if (p.getpId()==id)
+			{	
+				temp =p;
+				break;
+			}
+		}
+		return temp;
+	}
+
+	@Override
+	public Product getAProductbyName(String name) {
+		// TODO Auto-generated method stub
+		Product temp=null;
+		System.out.println(name);
+		for(Product p : alist) {
+			System.out.println(p.getpName());
+			if(p.getpName().equals(name)) {
+				System.out.println(p.getpName());
+				temp = p;
+				break;
+			}
+		}
+		return temp;
+	}
+	
+	@Override
+	public String editProduct(Product p) {
+		ProductAccess pa = new ProductAccess();
+		
+		Product pRemove = pa.getAProductbyId(p.getpId());
+		alist.remove(pRemove);
+		alist.add(p);
+		return "Product updated successfully";
+	}
+
+	@Override
+	public String delProduct(int id) {
+		// TODO Auto-generated method stub
+		ProductAccess pa = new ProductAccess();
+		
+		Product pRemove = pa.getAProductbyId(id);
+		alist.remove(pRemove);
+		
+		return "Product removed successfully";
+	}
+
+	
+
+}

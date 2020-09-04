@@ -1,0 +1,7 @@
+package com.telstra.threads1;
+
+public class ThreadClassB extends Thread{
+	
+	
+	
+}

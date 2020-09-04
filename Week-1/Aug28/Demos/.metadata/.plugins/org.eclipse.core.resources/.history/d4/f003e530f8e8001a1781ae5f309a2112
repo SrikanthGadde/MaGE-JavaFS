@@ -1,0 +1,18 @@
+package com.telstra.metadata;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import java.sql.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/telstra_database","root","QAZplm_0");
+	    System.out.println("Connected database successfully...");
+	    
+
+	}
+
+}

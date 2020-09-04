@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server port="8080">
+  <module context="HTML&amp;CSS" name="HTML&amp;CSS" path="D:/eclipse/workspaces/Test/Sept1/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/HTML&amp;CSS" type="static"/>
+</server>

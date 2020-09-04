@@ -1,0 +1,15 @@
+package cartpack;
+
+import java.util.ArrayList;
+
+import prodpack.Product;
+
+public interface CartInterface {
+	
+	String addToCart(Product p, int quantity);
+	String removeFromCart(int id, int quantity);
+	String editCart(Product p, int quantity);
+	String deleteCart
+	int checkout();
+	
+}

@@ -1,0 +1,15 @@
+package com.telstra.concurrency;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		MathOperation m  = new MathOperation();
+		
+		AddThread t1 = new AddThread(m);
+		
+		SubThread t4 = new SubThread(m, " 1")
+		
+	}
+
+}

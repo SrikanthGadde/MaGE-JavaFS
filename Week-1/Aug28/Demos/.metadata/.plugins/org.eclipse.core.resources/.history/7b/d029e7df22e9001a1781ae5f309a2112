@@ -1,0 +1,16 @@
+package com.telstra.concurrency;
+
+public class MathOperation implements Runnable {
+	private int i=0;
+	
+	public void add(int num) {
+		i += num;
+		System.out.println("Value of i after adition: "+i);
+	}
+	
+	public void sub(int num) {
+		i -= num;
+		System.out.println("Value of i after subtraction: "+i);
+	}
+	
+}

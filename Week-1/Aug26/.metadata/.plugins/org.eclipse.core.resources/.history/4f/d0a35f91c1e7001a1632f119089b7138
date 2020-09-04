@@ -1,0 +1,112 @@
+package prodaccesspack;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import prodpack.Product;
+
+public class ProductAccess implements ProductAccessInterface {
+  // resource is arraylist 
+	public ArrayList<Product>  alist = new ArrayList<Product>();
+		
+	@Override
+	public String addProduct(Product prod) {
+		alist.add(prod);
+		return ("Product "+prod+" added successfully");
+	}
+
+	@Override
+	public ArrayList<Product> getAllProducts() {
+		//System.out.println(alist);
+		return alist;
+	}
+
+	@Override
+	public Product getAProductbyId(int id) {
+		Product temp=null;
+		for (Product p:alist)  // enhanced for loop 
+		{
+			if (p.getpId()==id)
+			{	
+				temp =p;
+				break;
+			}
+		}
+		return temp;
+	}
+
+	@Override
+	public Product getAProductbyName(String name) {
+		// TODO Auto-generated method stub
+		Product temp=null;
+		for(Product p : alist) {
+			if(p.getpName().equals(name)) {
+				System.out.println(p.getpName());
+				temp = p;
+				break;
+			}
+		}
+		return temp;
+	}
+	
+	@Override
+	public String editProduct(Product p) {
+		Product pRemove = this.getAProductbyId(p.getpId());
+		alist.remove(pRemove);
+		alist.add(p);
+		return "Product updated successfully";
+	}
+
+	@Override
+	public String delProduct(int id) {
+		// TODO Auto-generated method stub		
+		Product pRemove = this.getAProductbyId(id);
+		alist.remove(pRemove);
+		
+		return "Product removed successfully";
+	}
+	
+	//////////////////////////////////////////////
+	
+	public HashMap<Product, Integer> cart = new HashMap<Product, Integer>();
+	
+	@Override
+	public String addCartItem(int id, int quantity) {
+		// TODO Auto-generated method stub
+		Product p = this.getAProductbyId(id);
+		cart.put(p, quantity);
+		return "Product successfully added";
+	}
+
+	@Override
+	public String removeCartItem(int id, int quantity) {
+		// TODO Auto-generated method stub
+		Product p = this.getAProductbyId(id);
+		int oldValue = cart.get(p);
+		
+		cart.replace(p, oldValue, oldValue-quantity);
+
+		return null;
+	}
+
+	@Override
+	public String editCartItem(int id, int quantity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getCart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int checkout() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+
+}

@@ -1,0 +1,41 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import data.BookDAO;
+import model.Book;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("1 or 2");
+		BookDAO ob = new BookDAO();
+		int choice = sc.nextInt();
+		switch(choice) {
+		case 1:
+		{
+			System.out.println("Enter the book id");
+			int pid = sc.nextInt();
+			System.out.println("Etner the book name");
+			String pname = sc.nextInt();
+			System.out.println("Enter the book price");
+			int pprice = sc.nextInt();
+			
+			
+		}
+		}
+		
+		ArrayList<Book> blist = ob.getAllBooks();
+		System.out.println("The following are the books in the database");
+		for (Book book:blist) {
+			System.out.println(book);
+		}
+		sc.close();
+		
+	}
+
+}

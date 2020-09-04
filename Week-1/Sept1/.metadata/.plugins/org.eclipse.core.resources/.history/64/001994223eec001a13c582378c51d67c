@@ -1,0 +1,14 @@
+import telstra.SampleProject.Employee;
+
+public class Main {
+	public static void main(String[] args) {
+		try {
+		Employee emp= new Employee("16XJ", "Test");
+		System.out.println(emp);
+		}
+		catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

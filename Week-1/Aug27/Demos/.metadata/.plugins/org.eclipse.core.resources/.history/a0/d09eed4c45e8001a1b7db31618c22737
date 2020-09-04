@@ -1,0 +1,10 @@
+package model;
+
+public class Book {
+	
+	private int bId;
+	private String name;
+	private int bPrice;
+	
+}
+ 

@@ -1,0 +1,22 @@
+package com.telstra.exceptionsAdvanced;
+
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ReadStreamClass read = new ReadStreamClass();
+		//read.readInput();
+		
+		try {
+			System.out.println(ob.readInput1());
+		}
+		catch (NumberFormatException | ArithmeticException | IOException e)	{
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

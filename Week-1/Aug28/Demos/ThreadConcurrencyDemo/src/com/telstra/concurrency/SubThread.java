@@ -1,0 +1,20 @@
+package com.telstra.concurrency;
+
+public class SubThread implements Runnable {
+	private Thread t;
+	private MathOperation m;
+	
+	public SubThread (MathOperation m, String threadName) {
+		this.m = m;
+		this.t = new Thread(this);
+		this.t.setName(threadName);
+		this.t.start();
+	}
+	
+	@Override
+	public void run() {
+		m.sub(10);		
+	}
+
+	
+}

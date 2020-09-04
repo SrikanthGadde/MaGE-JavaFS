@@ -1,0 +1,16 @@
+package cartpack;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import prodpack.Product;
+
+public class Cart implements CartInterface{
+	
+	public HashMap<Product, Integer> alist = new HashMap<Product, Integer>();
+	
+	
+	
+	
+
+}

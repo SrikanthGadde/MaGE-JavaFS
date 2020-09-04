@@ -1,0 +1,39 @@
+package com.telstra.concurrency;
+
+public class Main {
+
+	public static void main(String[] args) {
+		/*
+		MathOperation m  = new MathOperation();
+		
+		AddThread t1 = new AddThread(m, " 1");
+		AddThread t2 = new AddThread(m, " 2");
+		AddThread t3 = new AddThread(m, " 3");
+		
+		SubThread t4 = new SubThread(m, " 4");
+		SubThread t5 = new SubThread(m, " 5");
+		SubThread t6 = new SubThread(m, " 6");
+		SubThread t7 = new SubThread(m, " 7");
+		SubThread t8 = new SubThread(m, " 8");
+
+		AddThread t9 = new AddThread(m, " 9");
+		AddThread t0 = new AddThread(m, " 0");
+		*/
+
+		/*try {
+			return;
+		}
+		finally {
+			System.out.println("Finally");
+		}*/
+		
+		String s1 = "B";
+		String s2 = s1.concat("Y");
+		s2.concat("E");
+		System.out.println(s1);
+		System.out.println(s2);
+		
+		
+	}
+
+}

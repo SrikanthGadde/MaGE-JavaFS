@@ -1,0 +1,33 @@
+package com.telstra.tcl;
+
+import java.sql.*;
+
+public class Main {
+
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/telstra_database","root","QAZplm_0");
+	    System.out.println("Connected database successfully...");
+	    
+	    con.setAutoCommit(false);
+	    
+	    String query1 = "INSERT INTO book VALUES (9,\"Biology\",400)";
+	    String query2 = "SELECT COUNT(*) FROM book";
+	    String query3 = "INSERT INTO book VALUES (10,\"Economics\",350)";
+
+	    Statement s = con.createStatement();
+	    System.out.println(s.executeUpdate(query1));
+	    Savepoint save = con.setSavepoint("before");
+
+	    System.out.println(s.executeUpdate(query3));
+	    ResultSet rs = s.executeQuery(query2); 
+	    
+	    rs.next();
+	    System.out.println(rs.getInt(1));
+	    
+	    con.rollback(save);
+	    con.commit();
+	    
+	}
+
+}

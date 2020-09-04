@@ -1,0 +1,8 @@
+package telstra.SampleProject;
+
+public class Employee {
+	private String Id;
+	private String Name;
+	
+	
+}

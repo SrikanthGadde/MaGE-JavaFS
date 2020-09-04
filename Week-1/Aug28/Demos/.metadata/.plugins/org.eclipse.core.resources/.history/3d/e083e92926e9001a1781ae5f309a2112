@@ -1,0 +1,16 @@
+package com.telstra.concurrency;
+
+public class MathOperation {
+	private int i=0;
+	
+	public void synchronized add(int num) {
+		i += num;
+		System.out.println("Value of i after addition: "+i);
+	}
+	
+	public void sub(int num) {
+		i -= num;
+		System.out.println("Value of i after subtraction: "+i);
+	}
+	
+}

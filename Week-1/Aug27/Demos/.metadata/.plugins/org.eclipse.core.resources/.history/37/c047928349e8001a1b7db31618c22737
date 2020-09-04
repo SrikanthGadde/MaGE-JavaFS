@@ -1,0 +1,19 @@
+package main;
+
+import data.BookDAO;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		BookDAO ob = new BookDAO();
+		
+		ArrayList<Book> blist = ob.getAllBooks();
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package data;
+
+public interface BookDAOInterface {
+	ArrayList<Book> getAllBooks();
+	
+	public getAllBooks() {
+		
+	}
+}

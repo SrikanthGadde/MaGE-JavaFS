@@ -1,0 +1,6 @@
+package com.telstra.concurrency;
+
+public class ThreadOperation {
+	private Thread t;
+	private MathOperation m;
+}

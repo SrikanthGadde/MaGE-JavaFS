@@ -1,0 +1,9 @@
+package com.telstra.concurrency;
+
+public class MathOperation {
+	private int i=0;
+	
+	public void add(int num) {
+		i += num;
+	}
+}

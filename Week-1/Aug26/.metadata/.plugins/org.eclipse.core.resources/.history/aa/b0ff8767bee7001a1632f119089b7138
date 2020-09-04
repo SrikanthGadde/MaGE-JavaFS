@@ -1,0 +1,8 @@
+package cartpack;
+
+public interface CartInterface {
+	
+	String addToCart(Product p);
+	String removeFromCart(Product p);
+	
+}

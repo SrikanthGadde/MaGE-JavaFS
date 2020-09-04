@@ -1,0 +1,14 @@
+package com.telstra.concurrency;
+
+public class ThreadOperation implements Runnable {
+	private Thread t;
+	private MathOperation m;
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

@@ -1,0 +1,45 @@
+package com.telstra.sensitiveReadonly;
+import java.sql.*;
+
+public class Main {
+
+		public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/telstra_database","root","QAZplm_0");
+		    System.out.println("Connected database successfully...");
+		    
+		    Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,	ResultSet.CONCUR_READ_ONLY);
+		    ResultSet rs=st.executeQuery("Select * from book");
+		           	
+		            while(rs.next()){
+		                // rs coloum index starts from 1
+		                System.out.println(rs.getInt(1)+"   "+rs.getString(2)+"    "+rs.getInt(3));            
+		                }
+		            
+		            rs.absolute(3); //pointer at the third row
+		            System.out.println(rs.getInt(1)+ " "+rs.getString(2)+" "+rs.getInt(3));
+		          
+		            rs.relative(2); //forward 2 rows
+		            System.out.println(rs.getInt(1)+ " "+rs.getString(2)+" "+rs.getInt(3));
+		            
+		            rs.previous();
+		            System.out.println(rs.getInt(1)+ " "+rs.getString(2)+" "+rs.getInt(3));
+
+		            rs.beforeFirst();
+		            //currently rs isn't pointing to anything
+		            //call rs.next() to access the first row
+		            
+		            rs.afterLast();
+		            while(rs.previous()) {
+		            	System.out.println(rs.getInt(1)+" "+rs.getNString(2));
+		            }
+					//currently rs isn't pointing to anything
+					//call rs.previous() to access the first row
+		            
+		            //System.out.println(rs.next());
+		            //rs.close();
+		            //st.close();
+		            con.close();       
+	}
+
+}

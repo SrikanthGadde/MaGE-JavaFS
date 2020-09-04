@@ -1,0 +1,22 @@
+package com.telstra.exceptions;
+
+public class Employee {
+	
+	private int eid;
+	private int balLeaves;
+	
+	public Employee(int eid, int balLeaves) {
+		super();
+		this.eid = eid;
+		this.balLeaves = balLeaves;
+	}
+	
+	public String applyLeave(int leave) {
+		
+		
+		
+		return "OK";
+		
+	}
+	
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta charset="ISO-8859-1"> -->
+<title>Insert title here</title>
+ <!-- Property: Value-->
+<style>
+	a:hover {
+  /*background-color: yellow;*/
+  color: blue
+}
+	a{
+		/*background-color: orange;*/
+		color: yellow;
+		font-size: xx-large;
+		text-align:center
+	}
+	div{
+	border:solid 3px red;
+	background-color: gray;
+	text-align: center;
+	align-items: center;
+	}
+</style>
+</head>
+<body>
+<div>
+	<pre>
+	<a>About us</a>
+	<a>Contact us</a>
+	<a>Products</a>
+	<a>Support</a>
+	</pre>
+</div>
+</body>
+</html>

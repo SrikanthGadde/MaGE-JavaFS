@@ -1,0 +1,19 @@
+package telstra.SampleProject;
+
+public class Employee {
+	private String Id;
+	private String Name;
+	
+	public Employee(String id, String name) {
+		super();
+		Id = id;
+		Name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [Id=" + Id + ", Name=" + Name + "]";
+	}
+	
+	
+}

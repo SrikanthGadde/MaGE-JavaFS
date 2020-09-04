@@ -1,0 +1,11 @@
+package data;
+
+import java.sql.
+
+public class DataManager {
+	public Connection con;
+	public static Connection getConnect() {
+		Class.forName("com.myswl.cj.jdbc.Driver");
+		
+	}
+}

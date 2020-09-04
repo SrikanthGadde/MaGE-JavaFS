@@ -1,0 +1,21 @@
+package cartpack;
+
+import java.util.ArrayList;
+
+import prodpack.Product;
+
+public interface CartInterface {
+	
+	String addToCart(Product p, quantity);
+	String removeFromCart(int id);
+	String editCart(Product p, int quantity);
+	
+	
+	 String addProduct(Product prod);
+	 ArrayList<Product>  getAllProducts();
+	 Product getAProductbyId(int id);
+	 Product getAProductbyName(String name);
+	 String editProduct(Product p);
+	 String delProduct(int id);
+	
+}

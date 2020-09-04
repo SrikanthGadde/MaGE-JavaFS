@@ -1,0 +1,25 @@
+package com.telstra.exceptions;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e = new Employee(7823, 12);
+		
+		try {
+			e.applyLeave(10);
+		} catch (InsufficientLeaveException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			e.applyLeave(4);
+		} catch (InsufficientLeaveException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		System.out.println();
+		
+	}
+
+}

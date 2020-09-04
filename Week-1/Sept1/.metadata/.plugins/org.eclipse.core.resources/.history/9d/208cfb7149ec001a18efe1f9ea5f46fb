@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+var str1 = "Greetings";
+var str2 = "for all";
+var combined = str1+str2;
+document.write(combined+"<br/>");
+var n1 = 5;
+var n2 = 10;
+var sum = n1+n2;
+document.write(sum+"<br/>");
+</script>
+<body>
+
+</body>
+</html>

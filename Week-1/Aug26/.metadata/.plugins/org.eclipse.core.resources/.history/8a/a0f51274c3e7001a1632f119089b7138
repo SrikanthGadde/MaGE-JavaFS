@@ -1,0 +1,131 @@
+package Adminpack;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+
+import prodaccesspack.ProductAccess;
+import prodpack.Product;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		ProductAccess paob = new ProductAccess();
+		
+		paob.addProduct(new Product(1, "Apple", 20));
+		paob.addProduct(new Product(2, "Orange", 25));
+		paob.addProduct(new Product(3, "Banana", 30));
+		
+     //  int i=0;
+		while(true){
+			
+			System.out.println("1. Admin");
+			System.out.println("2. Customer");
+			int user = sc.nextInt();
+			
+			if (user == 1) {	
+				System.out.println("1. Add  a product");
+				System.out.println("2. Get all products");
+				System.out.println("3. Get a product by id");
+				System.out.println("4. Get a product by name");
+				System.out.println("5. Edit a product");
+				System.out.println("6. Delete a product");
+				System.out.println("7. Exit"); 
+				System.out.println("Enter your choice");
+				int choice = sc.nextInt();
+				switch(choice){
+				case 1:
+				{
+					System.out.println("Enter the product id:");
+					int pid = sc.nextInt();
+					System.out.println("Enter the product name");
+					String pname = sc.next();
+					System.out.println("enter the product price");
+					int pprice = sc.nextInt();
+					
+					Product p = new Product(pid,pname,pprice);
+					
+					System.out.println(paob.addProduct(p)); 				
+					break;
+				
+				}
+				case 2: 
+				{
+					
+					ArrayList<Product> plist= paob.getAllProducts();
+					System.out.println();
+					for (Product p:plist)
+					{
+						System.out.print(p);
+					}
+					System.out.println();
+					
+					break;
+				}
+				case 3:
+				{
+					System.out.println(" Enter the product id to be searched:");
+					int id = sc.nextInt();
+					Product product= paob.getAProductbyId(id);
+					if (product!=null)
+					{
+					System.out.println("Product found");
+					System.out.println(product);
+					}
+					else 
+						System.out.println("Product not found ");
+					break;
+				}
+				case 4:
+				{
+					 System.out.println("Enter the product name to be searched: ");
+					 String name = sc.next();
+					 Product product = paob.getAProductbyName(name);
+					 if (product!=null)	{
+						 System.out.println("Product found");
+						 System.out.println(product);
+					 }
+					 else 
+						 System.out.println("Product not found ");
+					break;
+				}
+			
+				case 5:{
+					System.out.println("Enter the product id:");
+					int pid = sc.nextInt();
+					System.out.println("Enter the updated product name");
+					String pname = sc.next();
+					System.out.println("Enter the updated product price");
+					int pprice = sc.nextInt();
+					
+					Product p = new Product(pid,pname,pprice);
+					
+					System.out.println(paob.editProduct(p)); 				
+					break;
+					
+				}
+				case 6:{
+					System.out.println(" Enter the product id to be deleted:");
+					int id = sc.nextInt();
+					System.out.println(paob.delProduct(id));
+					break;
+				}
+				
+				case 7:
+				{	
+					sc.close();
+					System.exit(0);
+				}
+			
+				}
+		
+			}
+	}
+	
+	
+
+	}
+
+}

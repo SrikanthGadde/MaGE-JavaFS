@@ -1,0 +1,27 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import data.BookDAO;
+import model.Book;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		BookDAO ob = new BookDAO();
+		
+		ArrayList<Book> blist = ob.getAllBooks();
+		System.out.println();
+		for (Book book:blist) {
+			System.out.println(book);
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--  
+<head>
+<!-- <meta charset="ISO-8859-1"> -->
+<title>Insert title here</title>
+ <!-- Property: Value-->
+<style>
+	h1{
+		background-color: gray;
+		border: double 5px black;
+		color: yellow;
+	}
+	.test{
+		border: solid 2px;
+		height: 200px;
+		width: 200px;
+	}
+	a{
+		color: gray;
+		
+	}
+	#p1{
+		background-color: pink;
+		font-size: xx-large;
+	}
+	#p2{
+		background-color: gray;
+		font-family: Calibri;
+		font-size: xx-large;
+		font-weight: 800;
+	}
+	
+</style>
+</head>
+<body>
+
+<div class = "test">
+	Text inside div tag
+	<h1>Text inside heading tag</h1>
+	<p>Text inside paragraph tag</p>
+	<a href="https://www.google.com">Google</a>
+</div>
+	<h1 id="p1">Head 1</h1>
+	<p id="p1">Line 1</p>
+	<p id="p2">Line 2</p>
+	<p id="p1">Line 3</p>
+	<p id="p3">Line 4</p>
+	<p id="p2">Line 5</p>
+</body>	-->
+</html>

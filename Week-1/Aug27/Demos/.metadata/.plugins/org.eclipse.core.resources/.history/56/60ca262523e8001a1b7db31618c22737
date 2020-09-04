@@ -1,0 +1,8 @@
+package com.telstra.exceptions;
+
+public class Employee {
+	
+	int eid;
+	int balLeaves
+	
+}

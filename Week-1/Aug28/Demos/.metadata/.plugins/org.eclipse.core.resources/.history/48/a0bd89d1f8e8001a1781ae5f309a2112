@@ -1,0 +1,22 @@
+package com.telstra.metadata;
+
+import java.sql.*;
+
+public class Main {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/telstra_database","root","QAZplm_0");
+	    System.out.println("Connected database successfully...");
+	    
+	    PreparedStatement ps = con.prepareStatement("SELECT * FROM book");
+	    
+	    ResultSet rs = ps.executeQuery();
+	    
+	    ResultSetMetaData rsmd = rs.getMetaData();
+	    
+	    
+
+	}
+
+}
