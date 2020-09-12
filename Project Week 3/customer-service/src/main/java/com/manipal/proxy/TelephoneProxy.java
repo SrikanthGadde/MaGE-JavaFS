@@ -1,5 +1,6 @@
 package com.manipal.proxy;
 
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.manipal.model.Telephone;
 
-@FeignClient(name="telephone-service", url="localhost:8000")
+//@FeignClient(name="telephone-service", url="localhost:8000")
+@FeignClient(name="telephone-service")
+@RibbonClient(name="telephone-service")
 public interface TelephoneProxy {
 	
 	@PostMapping("/telephone")
